@@ -12,8 +12,7 @@ const port = process.env.PORT || 5173;
 const hostArgIndex = process.argv.indexOf("--host");
 const host = (hostArgIndex !== -1 && process.argv[hostArgIndex + 1]) || process.env.HOST || "127.0.0.1";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const baseDir = path.dirname(fileURLToPath(import.meta.url));
 
 const dbUrl = process.env.DATABASE_URL;
 if (!dbUrl) {
@@ -79,7 +78,7 @@ app.use((req, res, next) => {
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: false, limit: "1mb" }));
-app.use(express.static(__dirname));
+app.use(express.static(baseDir));
 
 const rateLimit = ({ windowMs, max, message }) => {
   const hits = new Map();
