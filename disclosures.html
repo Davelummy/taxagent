@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTA | Disclosures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="ASTA logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Disclosures</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="nav-links" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Client Dashboard</a>
+        <a href="trust-center.html">Trust Center</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="trust-main">
+    <section class="trust-hero">
+      <div>
+        <p class="eyebrow">Disclosures</p>
+        <h1>Important notices for taxpayers.</h1>
+        <p class="hero-copy">These disclosures provide required notices related to IRS guidance and service limitations.</p>
+      </div>
+      <div class="trust-hero-card">
+        <p class="overlay-label">Last updated</p>
+        <h2>January 15, 2026</h2>
+        <p>Contact ASTA if you need assistance interpreting any disclosure.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">IRS Circular 230</p>
+        <h2>Federal tax advice disclosure</h2>
+      </div>
+      <div class="trust-panel">
+        <p>Any tax advice provided by ASTA is not intended or written to be used, and cannot be used, for avoiding penalties under the Internal Revenue Code or for promoting, marketing, or recommending to another party any transaction or matter addressed herein.</p>
+      </div>
+    </section>
+
+    <section class="section trust-split">
+      <div>
+        <p class="eyebrow">Not the IRS</p>
+        <h2>ASTA is a private tax preparation service</h2>
+        <ul class="policy-list">
+          <li>ASTA is not affiliated with or endorsed by the IRS.</li>
+          <li>IRS acceptance is subject to IRS systems and rules.</li>
+          <li>Filing deadlines and requirements are governed by the IRS.</li>
+        </ul>
+      </div>
+      <div class="trust-panel">
+        <h3>Estimates and outcomes</h3>
+        <p>Refund estimates are preliminary and depend on information provided. Final refunds, balances, and processing timelines are determined by the IRS.</p>
+        <ul class="policy-list">
+          <li>Refund estimates are not guarantees.</li>
+          <li>IRS adjustments may change outcomes.</li>
+          <li>Additional documentation may be required.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">E-file authorization</p>
+        <h2>Authorization requirements</h2>
+      </div>
+      <div class="trust-grid">
+        <article class="policy-card">
+          <h3>Form 8879</h3>
+          <p>ASTA requires a signed Form 8879 before transmitting an IRS e-file return.</p>
+        </article>
+        <article class="policy-card">
+          <h3>Identity protection</h3>
+          <p>IRS IP PINs are required when issued by the IRS and must be provided.</p>
+        </article>
+        <article class="policy-card">
+          <h3>Client review</h3>
+          <p>Clients must review draft returns and confirm accuracy before authorization.</p>
+        </article>
+        <article class="policy-card">
+          <h3>Consent</h3>
+          <p>Electronic consent is collected before any submission is made.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="ASTA logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Compliance inquiries • compliance@atlassecuretax.com</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclosures.html">Disclosures</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>

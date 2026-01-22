@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTA | Preparer Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-auth="admin" data-redirect="preparer.html">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Preparer access</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="nav-links" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="login.html">Client login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell">
+      <div class="auth-intro">
+        <p class="eyebrow">Preparer portal</p>
+        <h1>Sign in to the ASTA preparer command center.</h1>
+        <p class="hero-copy">
+          This portal is restricted to ASTA staff. Use your company email to receive a one-time code
+          and access client submissions, review queues, and filing status updates.
+        </p>
+        <div class="auth-steps">
+          <div class="auth-step">
+            <span>1</span>
+            <div>
+              <h3>Verify staff identity</h3>
+              <p>Confirm access with a secure, time-limited code.</p>
+            </div>
+          </div>
+          <div class="auth-step">
+            <span>2</span>
+            <div>
+              <h3>Review client intake</h3>
+              <p>Manage intake status and oversee secure uploads.</p>
+            </div>
+          </div>
+        </div>
+        <div class="auth-checklist">
+          <h3>Staff-only access</h3>
+          <ul>
+            <li>Restricted to verified ASTA email addresses</li>
+            <li>Audit-friendly access controls</li>
+            <li>Preparer-only status updates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portal-card auth-card">
+        <h2>Verify preparer access</h2>
+        <form id="login-form" class="portal-form">
+          <label>
+            Company email address
+            <input type="email" id="login-email" placeholder="you@militaryadmin.org" required />
+          </label>
+          <button class="primary" type="submit">Send one-time code</button>
+        </form>
+        <p class="portal-message" id="login-message"></p>
+
+        <div class="otp-panel">
+          <form id="otp-form" class="portal-form">
+            <label>
+              Verification code
+              <input type="text" id="otp-code" inputmode="numeric" placeholder="123456" maxlength="6" />
+            </label>
+            <button class="ghost" type="submit">Verify code</button>
+          </form>
+          <p class="portal-message" id="otp-message"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Preparer support - support@atlassecuretax.com</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclosures.html">Disclosures</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script type="module" src="login.js"></script>
+</body>
+</html>

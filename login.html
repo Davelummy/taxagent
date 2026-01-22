@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Secure Tax Agency | Secure Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Secure client access</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="nav-links" id="nav-menu"></div>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell">
+      <div class="auth-intro">
+        <p class="eyebrow">Secure login</p>
+        <h1>Access your private filing workspace.</h1>
+        <p class="hero-copy">
+          Enter your email to receive a one-time code. After verification, choose a unique
+          username to access your secure dashboard.
+        </p>
+        <div class="auth-steps">
+          <div class="auth-step">
+            <span>1</span>
+            <div>
+              <h3>Verify identity</h3>
+              <p>Confirm access with a secure, time-limited code.</p>
+            </div>
+          </div>
+          <div class="auth-step">
+            <span>2</span>
+            <div>
+              <h3>Secure your profile</h3>
+              <p>Add your legal name and phone for filing records.</p>
+            </div>
+          </div>
+        </div>
+        <div class="auth-checklist">
+          <h3>What to expect</h3>
+          <ul>
+            <li>IRS-aligned secure intake workflow</li>
+            <li>Encrypted document vault with audit logs</li>
+            <li>Dedicated preparer assignment and status updates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portal-card auth-card">
+        <h2>Verify your access</h2>
+        <div class="auth-toggle" role="tablist" aria-label="Authentication mode">
+          <button class="auth-tab is-active" type="button" data-mode="signin" aria-selected="true">Sign in</button>
+          <button class="auth-tab" type="button" data-mode="signup" aria-selected="false">Create account</button>
+        </div>
+        <form id="login-form" class="portal-form">
+          <label>
+            Email address
+            <input type="email" id="login-email" placeholder="you@email.com" required />
+          </label>
+          <div class="signup-fields is-hidden" id="signup-fields">
+            <label>
+              Full legal name
+              <input type="text" id="signup-name" placeholder="First Last" />
+            </label>
+            <label>
+              Mobile phone
+              <input type="tel" id="signup-phone" placeholder="(555) 123-4567" />
+            </label>
+          </div>
+          <button class="primary" type="submit">Send one-time code</button>
+        </form>
+        <p class="portal-message" id="login-message"></p>
+
+        <div class="otp-panel">
+          <form id="otp-form" class="portal-form">
+            <label>
+              Verification code
+              <input type="text" id="otp-code" inputmode="numeric" placeholder="123456" maxlength="6" />
+            </label>
+            <button class="ghost" type="submit">Verify code</button>
+          </form>
+          <p class="portal-message" id="otp-message"></p>
+        </div>
+
+        <div class="username-panel is-hidden" id="username-panel">
+          <h3>Complete account setup</h3>
+          <form id="onboard-form" class="portal-form">
+            <label>
+              Full legal name
+              <input type="text" id="onboard-name" placeholder="First Last" />
+            </label>
+            <label>
+              Mobile phone
+              <input type="tel" id="onboard-phone" placeholder="(555) 123-4567" />
+            </label>
+            <label>
+              Unique username
+              <input type="text" id="onboard-username" placeholder="e.g. jordan.miles" required />
+            </label>
+            <button class="primary" type="submit">Save username</button>
+          </form>
+          <p class="portal-message" id="onboard-message"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Secure login support • support@atlassecuretax.com</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclosures.html">Disclosures</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script type="module" src="login.js"></script>
+</body>
+</html>

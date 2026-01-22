@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Secure Tax Agency | High-Security IRS Filing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">High-security IRS-ready filing for tax professionals</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="nav-links" id="nav-menu">
+        <a href="dashboard.html">Client Dashboard</a>
+        <a href="trust-center.html">Trust Center</a>
+        <a href="#estimate">Refund Estimator</a>
+        <a class="primary nav-cta" id="intake-nav" href="#intake">Secure Intake</a>
+        <div class="nav-user">
+          <button class="user-chip" id="user-chip" type="button" aria-expanded="false">
+            <span class="user-initials" id="user-initials">?</span>
+            <span class="user-name" id="user-name"></span>
+          </button>
+          <button class="ghost signout-button" id="signout-button" type="button" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16 17l5-5-5-5M21 12H9M12 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">IRS-aligned secure intake</p>
+        <h1>Protect taxpayer data and deliver an IRS-ready filing packet.</h1>
+        <p class="hero-copy">
+          ASTA (Atlas Secure Tax Agency) provides a secure intake workflow for
+          U.S. individual returns. Identity verification, document controls, and
+          audit-grade records keep filings accurate, compliant, and ready for review.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" id="intake-cta" data-scroll="#intake">Launch Secure Intake</button>
+          <a class="ghost" href="#estimate">Estimate refund</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-pill">IRS Pub 4557 aligned</div>
+          <div class="trust-pill">Zero-trust access controls</div>
+          <div class="trust-pill">256-bit encryption</div>
+          <div class="trust-pill">US-based data residency</div>
+        </div>
+      </div>
+      <div class="hero-media" data-reveal style="--delay:0.1s">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" alt="Secure data center environment with server racks." decoding="async" fetchpriority="high" />
+        <div class="hero-overlay">
+          <div>
+            <p class="overlay-label">Live Intake Monitor</p>
+            <p class="overlay-value">73 submissions</p>
+          </div>
+          <div>
+            <p class="overlay-label">Integrity checks</p>
+            <p class="overlay-value">100% verified</p>
+          </div>
+          <div>
+            <p class="overlay-label">Packet status</p>
+            <p class="overlay-value">Ready to file</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" data-reveal style="--delay:0.05s">
+      <div>
+        <p class="strip-title">Trusted by tax organizations nationwide</p>
+        <p class="strip-subtitle">Serving CPA firms, enrolled agents, and multi-state practices</p>
+      </div>
+      <div class="logo-carousel" aria-label="Trusted organizations carousel">
+        <div class="logo-track">
+          <span class="logo-item">Summit CPA Group</span>
+          <span class="logo-item">Westbridge Tax Partners</span>
+          <span class="logo-item">FederalWay Advisors</span>
+          <span class="logo-item">Northline Accounting</span>
+          <span class="logo-item">Harborview Tax</span>
+          <span class="logo-item">Liberty Ledger</span>
+          <span class="logo-item">Summit CPA Group</span>
+          <span class="logo-item">Westbridge Tax Partners</span>
+          <span class="logo-item">FederalWay Advisors</span>
+          <span class="logo-item">Northline Accounting</span>
+          <span class="logo-item">Harborview Tax</span>
+          <span class="logo-item">Liberty Ledger</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Client confidence</p>
+        <h2>Professional environments built for sensitive tax records</h2>
+        <p>Demonstrate the level of care and confidentiality expected for IRS data.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="photo-card" data-reveal style="--delay:0.05s">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1000&q=80" alt="Professional office workspace during a client discussion." loading="lazy" />
+          <figcaption>Private consultations in secure, client-first settings.</figcaption>
+        </figure>
+        <figure class="photo-card" data-reveal style="--delay:0.12s">
+          <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1000&q=80" alt="Hands reviewing paperwork with a pen at a desk." loading="lazy" />
+          <figcaption>Every document reviewed with precision and accountability.</figcaption>
+        </figure>
+        <figure class="photo-card" data-reveal style="--delay:0.2s">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80" alt="Tax professionals collaborating in a modern office." loading="lazy" />
+          <figcaption>Dedicated professionals focused on accuracy and compliance.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="security" class="section security">
+      <div class="section-heading">
+        <p class="eyebrow">Security architecture</p>
+        <h2>Defense-in-depth for confidential taxpayer data</h2>
+        <p>Every step is designed for traceability, validation, and least-privilege access.</p>
+      </div>
+      <div class="security-grid">
+        <article class="security-card" data-reveal style="--delay:0.05s">
+          <h3>Identity verification</h3>
+          <p>Account authentication, secure intake controls, and client attestations reduce fraud risk.</p>
+        </article>
+        <article class="security-card" data-reveal style="--delay:0.12s">
+          <h3>Audit-ready records</h3>
+          <p>Every submission is timestamped with tamper-evident logs for compliance review.</p>
+        </article>
+        <article class="security-card" data-reveal style="--delay:0.2s">
+          <h3>Segmented vault storage</h3>
+          <p>Encrypted storage keeps PII separated from operational workflows and access tiers.</p>
+        </article>
+        <article class="security-card" data-reveal style="--delay:0.28s">
+          <h3>Incident readiness</h3>
+          <p>Policy enforcement and reporting readiness support security response and audits.</p>
+        </article>
+      </div>
+      <div class="security-split">
+        <div class="security-notes" data-reveal style="--delay:0.12s">
+          <h3>The ASTA Standard</h3>
+          <p>
+            Our platform aligns with IRS Publication 4557 and GLBA safeguards,
+            while providing the controls tax organizations expect.
+          </p>
+          <ul>
+            <li>Dedicated secure intake environment per firm</li>
+            <li>Role-based access with configurable approvals</li>
+            <li>Document integrity checks and validation</li>
+          </ul>
+        </div>
+        <div class="security-visual" data-reveal style="--delay:0.2s">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" alt="Security operations team monitoring compliance data." loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow">
+      <div class="section-heading">
+        <p class="eyebrow">Controlled workflow</p>
+        <h2>Clear, compliant steps from intake to IRS filing</h2>
+      </div>
+      <div class="workflow-track">
+        <div class="workflow-step" data-reveal style="--delay:0.05s">
+          <p class="step-index">01</p>
+          <h3>Collect</h3>
+          <p>Guided intake captures W-2, 1099, and deduction data with smart validation.</p>
+        </div>
+        <div class="workflow-step" data-reveal style="--delay:0.12s">
+          <p class="step-index">02</p>
+          <h3>Verify</h3>
+          <p>Identity checks and document validation confirm every upload is authentic.</p>
+        </div>
+        <div class="workflow-step" data-reveal style="--delay:0.2s">
+          <p class="step-index">03</p>
+          <h3>Compile</h3>
+          <p>IRS-ready packet assembly routes data to the assigned preparer.</p>
+        </div>
+        <div class="workflow-step" data-reveal style="--delay:0.28s">
+          <p class="step-index">04</p>
+          <h3>Approve</h3>
+          <p>Client review and authorization ensure accountability before submission.</p>
+        </div>
+        <div class="workflow-step" data-reveal style="--delay:0.36s">
+          <p class="step-index">05</p>
+          <h3>File</h3>
+          <p>Transmit via IRS-authorized e-file channels with confirmation tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="estimate" class="section estimator">
+      <div class="section-heading">
+        <p class="eyebrow">Refund estimator</p>
+        <h2>Get a preliminary federal refund estimate</h2>
+        <p>Estimate only. Credits, state taxes, and special IRS rules are not included.</p>
+      </div>
+      <div class="estimate-grid">
+        <form id="estimate-form" class="estimate-form">
+          <div class="field-grid">
+            <label>
+              Filing year
+              <select id="estimate-year" required>
+                <option value="">Select year</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+              </select>
+            </label>
+            <label>
+              Filing status
+              <select id="estimate-status" required>
+                <option value="">Select one</option>
+                <option value="single">Single</option>
+                <option value="married_joint">Married filing jointly</option>
+                <option value="married_separate">Married filing separately</option>
+                <option value="head_household">Head of household</option>
+              </select>
+            </label>
+            <label>
+              W-2 wages
+              <input type="number" id="estimate-wages" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              1099 income
+              <input type="number" id="estimate-1099" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Investment income
+              <input type="number" id="estimate-investment" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Retirement distributions
+              <input type="number" id="estimate-retirement" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Other income
+              <input type="number" id="estimate-other-income" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Mortgage interest
+              <input type="number" id="estimate-mortgage" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Charitable contributions
+              <input type="number" id="estimate-charity" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Student loan interest
+              <input type="number" id="estimate-student-loan" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              HSA contributions
+              <input type="number" id="estimate-hsa" placeholder="0" min="0" step="0.01" />
+            </label>
+            <label>
+              Federal tax withheld
+              <input type="number" id="estimate-withholding" placeholder="0" min="0" step="0.01" />
+            </label>
+          </div>
+        </form>
+        <div class="estimate-card">
+          <h4>Refund Estimate</h4>
+          <p class="estimate-note" id="estimate-note">Based on federal brackets for the selected year.</p>
+          <div class="estimate-row">
+            <span>Taxable income</span>
+            <strong id="estimate-taxable">$0</strong>
+          </div>
+          <div class="estimate-row">
+            <span>Estimated tax</span>
+            <strong id="estimate-tax">$0</strong>
+          </div>
+          <div class="estimate-row">
+            <span>Withholding</span>
+            <strong id="estimate-withheld">$0</strong>
+          </div>
+          <div class="estimate-total" id="estimate-result" role="status" aria-live="polite">Estimated refund: $0</div>
+          <p class="estimate-disclaimer">
+            Estimate only. Uses marginal brackets; credits and special rules not included.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="intake" class="section intake">
+      <div class="section-heading">
+        <p class="eyebrow">Secure intake</p>
+        <h2>Collect taxpayer data with a hardened intake experience</h2>
+        <p>Use secure intake when you are ready to engage a tax professional and begin filing.</p>
+      </div>
+      <div class="intake-shell">
+        <aside class="intake-sidebar" data-reveal style="--delay:0.12s">
+          <h3>Intake Progress</h3>
+          <p class="sidebar-copy">Required fields ensure a complete IRS filing packet.</p>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <p class="progress-text" id="progress-text">0% complete</p>
+          <div class="estimate-card intake-estimate-card">
+            <h4>Estimated refund</h4>
+            <p class="intake-estimate-value" id="intake-estimate-value">Estimate pending</p>
+            <p class="estimate-note" id="intake-estimate-note">
+              Add filing year, status, income, and withholding to see a live estimate.
+            </p>
+          </div>
+          <div class="sidebar-card">
+            <h4>Secure handling</h4>
+            <ul>
+              <li>Masked SSN entry and automated redaction</li>
+              <li>Document checksum verification</li>
+              <li>Encrypted transfer to the tax team</li>
+            </ul>
+          </div>
+          <div class="sidebar-alert">
+              <p>Private data remains encrypted and access is restricted to your assigned team.</p>
+            </div>
+          </aside>
+
+        <div class="intake-locked" id="intake-locked" hidden>
+          <div class="dashboard-card intake-lock-card">
+            <p class="eyebrow">Secure intake completed</p>
+            <h3>Your secure intake is already on file.</h3>
+            <p class="intake-lock-note">
+              Submitted <span id="intake-lock-date">recently</span> for tax year
+              <span id="intake-lock-year">current</span>. Continue to your client dashboard to upload documents and finalize Form 8879.
+            </p>
+            <p class="intake-lock-note">
+              Need to correct details? You can submit an updated secure intake at any time.
+            </p>
+            <div class="post-submit-actions">
+              <button class="primary" id="intake-update" type="button">Update secure intake</button>
+              <a class="ghost" href="dashboard.html#dashboard-authorization">Open Client Dashboard</a>
+              <a class="ghost" href="https://www.irs.gov/pub/irs-pdf/f8879.pdf" target="_blank" rel="noreferrer">Download Form 8879</a>
+            </div>
+          </div>
+        </div>
+
+        <form id="intake-form" class="intake-form" data-reveal style="--delay:0.2s" novalidate>
+          <div class="form-message" role="alert" aria-live="polite"></div>
+          <fieldset>
+            <legend>Identity</legend>
+            <div class="fieldset-title" aria-hidden="true">Identity</div>
+            <div class="field-grid">
+              <label>
+                Legal first name
+                <input type="text" name="first_name" autocomplete="given-name" required />
+              </label>
+              <label>
+                Legal last name
+                <input type="text" name="last_name" autocomplete="family-name" required />
+              </label>
+              <label>
+                Filing year
+                <select name="filing_year" required>
+                  <option value="">Select year</option>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                </select>
+              </label>
+              <label>
+                Filing status
+                <select name="filing_status" required>
+                  <option value="">Select one</option>
+                  <option value="single">Single</option>
+                  <option value="married_joint">Married filing jointly</option>
+                  <option value="married_separate">Married filing separately</option>
+                  <option value="head_household">Head of household</option>
+                </select>
+              </label>
+              <label>
+                Social Security Number
+                <input type="text" name="ssn" placeholder="XXX-XX-XXXX" inputmode="numeric" autocomplete="off" required />
+              </label>
+              <label>
+                IRS IP PIN (6-digit)
+                <input type="password" name="ip_pin" placeholder="••••••" inputmode="numeric" autocomplete="off" pattern="[0-9]{6}" minlength="6" maxlength="6" required />
+              </label>
+              <label>
+                Date of birth
+                <input type="date" name="dob" required />
+              </label>
+              <label>
+                Primary email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Mobile phone
+                <input type="tel" name="phone" placeholder="(555) 123-4567" autocomplete="tel" required />
+              </label>
+            </div>
+            <div class="ippin-info">
+              <h4>IRS IP PIN required for filing</h4>
+              <p>
+                The IRS Identity Protection PIN (IP PIN) is a 6-digit code issued annually.
+                Find it in your IRS Online Account and provide it here to complete filing.
+              </p>
+              <ol>
+                <li>Visit <a href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin" target="_blank" rel="noreferrer">irs.gov/ippin</a></li>
+                <li>Sign in or create an IRS Online Account</li>
+                <li>Select "Get an IP PIN" and copy the 6-digit code for this year</li>
+              </ol>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Income Details</legend>
+            <div class="fieldset-title" aria-hidden="true">Income Details</div>
+            <div class="field-grid">
+              <label>
+                Employer name
+                <input type="text" name="employer" required />
+              </label>
+              <label>
+                W-2 total wages
+                <input type="number" name="wages" placeholder="0" min="0" step="0.01" required />
+              </label>
+              <label>
+                Federal tax withheld
+                <input type="number" name="federal_withholding" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                1099 income total
+                <input type="number" name="income_1099" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Investment income
+                <input type="number" name="investment_income" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Retirement distributions
+                <input type="number" name="retirement" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Other income sources
+                <input type="text" name="other_income" placeholder="Royalties, rental" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Deductions and Credits</legend>
+            <div class="fieldset-title" aria-hidden="true">Deductions and Credits</div>
+            <div class="field-grid">
+              <label>
+                Mortgage interest paid
+                <input type="number" name="mortgage" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Charitable contributions
+                <input type="number" name="charity" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Student loan interest
+                <input type="number" name="student_loan" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Child tax credit dependents
+                <input type="number" name="dependents" placeholder="0" min="0" max="20" step="1" />
+              </label>
+              <label>
+                HSA contributions
+                <input type="number" name="hsa" placeholder="0" min="0" step="0.01" />
+              </label>
+              <label>
+                Other deductions
+                <input type="text" name="other_deductions" placeholder="Medical, education" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Document Uploads</legend>
+            <div class="fieldset-title" aria-hidden="true">Document Uploads</div>
+            <div class="upload-grid">
+              <label class="upload">
+                <span>W-2 or 1099 forms</span>
+                <small>Name must include W-2 or 1099 • Max 10 MB • PDF, JPG, PNG</small>
+                <input type="file" name="w2_upload" accept=".pdf,.jpg,.png" required />
+              </label>
+              <label class="upload">
+                <span>1098 mortgage statement</span>
+                <small>Name must include 1098 or Mortgage • Max 10 MB • PDF, JPG, PNG</small>
+                <input type="file" name="mortgage_upload" accept=".pdf,.jpg,.png" />
+              </label>
+              <label class="upload">
+                <span>Photo ID</span>
+                <small>Name must include ID or Passport • Max 10 MB • PDF, JPG, PNG</small>
+                <input type="file" name="id_upload" accept=".pdf,.jpg,.png" required />
+              </label>
+              <label class="upload">
+                <span>Other supporting documents</span>
+                <small>Use a descriptive name (e.g., Receipt_2025.pdf) • Max 10 MB each • PDF, JPG, PNG</small>
+                <input type="file" name="other_uploads" accept=".pdf,.jpg,.png" multiple />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Consent and Delivery</legend>
+            <div class="fieldset-title" aria-hidden="true">Consent and Delivery</div>
+            <div class="field-grid">
+              <label>
+                Preferred filing method
+                <select name="filing_method" required>
+                  <option value="">Select one</option>
+                  <option value="efile">IRS e-file</option>
+                  <option value="mail">Print and mail</option>
+                  <option value="extension">Request extension</option>
+                </select>
+              </label>
+              <label>
+                Preferred contact method
+                <select name="contact_method" required>
+                  <option value="">Select one</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                  <option value="text">Text</option>
+                </select>
+              </label>
+              <label class="full">
+                Additional notes
+                <textarea name="notes" rows="4" placeholder="Mention special circumstances, multi-state filing, or life changes."></textarea>
+              </label>
+              <label class="checkbox full">
+                <input type="checkbox" name="consent" required />
+                I authorize ASTA to collect and prepare my tax data for filing with the IRS.
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="primary">Submit secure intake</button>
+            <button type="button" class="ghost" id="intake-cancel" hidden>Cancel update</button>
+            <p class="fine-print">Data is encrypted on submission and retained per firm policy.</p>
+            <p class="intake-receipt" id="intake-receipt" aria-live="polite"></p>
+          </div>
+          <div class="post-submit">
+            <h3>Next required step: E-file authorization</h3>
+            <p>To complete filing, upload your signed IRS Form 8879 in the client dashboard.</p>
+            <div class="post-submit-actions">
+              <a class="primary" href="dashboard.html#dashboard-authorization">Open Client Dashboard</a>
+              <a class="ghost" href="https://www.irs.gov/pub/irs-pdf/f8879.pdf" target="_blank" rel="noreferrer">Download Form 8879</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section assurance" data-reveal style="--delay:0.12s">
+      <div class="assurance-card">
+        <div>
+          <p class="eyebrow">Reach the team</p>
+          <h2>Get direct support before you file.</h2>
+          <p>Contact ASTA for taxpayer guidance, preparer coordination, and security questions.</p>
+        </div>
+        <a class="primary" href="contact.html">Contact us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Serving taxpayers across the United States</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="trust-center.html">Trust Center</a>
+      <a href="#security">Security</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#estimate">Refund Estimator</a>
+      <a href="#intake">Secure Intake</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclosures.html">Disclosures</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="home.js"></script>
+</body>
+</html>

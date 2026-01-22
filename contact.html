@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTA | Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Reach the ASTA team</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="nav-links" id="nav-menu">
+        <a href="index.html">Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="portal-main contact-main">
+    <section class="contact-shell">
+      <div class="contact-info">
+        <p class="eyebrow">Reach the Team</p>
+        <h1>Support for taxpayers and preparers.</h1>
+        <p class="hero-copy">
+          Reach ASTA for personal tax filing help or preparer collaboration.
+          We provide security walkthroughs covering access controls, encryption, and IRS-aligned workflows.
+        </p>
+        <div class="contact-points">
+          <div class="contact-point">
+            <h3>Who we support</h3>
+            <ul>
+              <li>Taxpayers seeking secure filing guidance</li>
+              <li>Tax preparers coordinating client submissions</li>
+            </ul>
+          </div>
+          <div class="contact-point">
+            <h3>What happens next</h3>
+            <p>We respond within 1 business day with next steps, scheduling options, and security materials.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portal-card contact-card">
+        <h2>Reach the ASTA team</h2>
+        <form id="contact-form" class="portal-form" novalidate>
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="First Last" required />
+          </label>
+          <label>
+            Work email
+            <input type="email" name="email" placeholder="you@company.com" required />
+          </label>
+          <label>
+            Taxpayer or preparer
+            <input type="text" name="company" placeholder="Taxpayer or preparer name" />
+          </label>
+          <label>
+            Role
+            <input type="text" name="role" placeholder="Owner, HR, Tax Director" />
+          </label>
+          <label>
+            Preferred contact time
+            <input type="text" name="preferred_time" placeholder="Weekdays, 9 AM - 3 PM ET" />
+          </label>
+          <label>
+            How can we help?
+            <textarea name="message" rows="4" placeholder="Tell us about your security or onboarding needs." required></textarea>
+          </label>
+          <button class="primary" type="submit">Send request</button>
+        </form>
+        <p class="portal-message" id="contact-message"></p>
+        <p class="contact-alt">
+          Prefer email? Write to <a href="mailto:support@atlassecuretax.com">support@atlassecuretax.com</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Security briefings and onboarding support</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="trust-center.html">Trust center</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

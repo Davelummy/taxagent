@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTA | Preparer Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav dashboard-top">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="ASTA logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Preparer dashboard</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="dashboard-links" id="nav-menu">
+        <a class="nav-home" href="index.html">Home</a>
+        <div class="nav-user">
+          <button class="user-chip" id="user-chip" type="button" aria-expanded="false">
+            <span class="user-initials" id="user-initials">?</span>
+            <span class="user-name" id="user-name"></span>
+          </button>
+          <button class="ghost signout-button" id="signout-button" type="button" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16 17l5-5-5-5M21 12H9M12 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="preparer-page">
+    <section class="preparer-hero" data-reveal>
+      <div>
+        <p class="eyebrow">Preparer operations</p>
+        <h1>Oversee every client intake, document upload, and filing status.</h1>
+        <p class="hero-copy">Track secure submissions, update review status, and keep each taxpayer record ready for e-file.</p>
+      </div>
+      <div class="dashboard-card preparer-status-card">
+        <p class="card-label">Access status</p>
+        <p class="card-value" id="preparer-access-title">Checking access...</p>
+        <p class="card-subtext" id="preparer-access-note">Authentication required for preparer tools.</p>
+      </div>
+    </section>
+
+    <section class="preparer-section" id="preparer-summary" data-preparer-section hidden>
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Portfolio overview</p>
+          <h2>Client volume and filing readiness</h2>
+        </div>
+      </div>
+      <div class="dashboard-metrics preparer-metrics">
+        <div class="dashboard-card metric-card">
+          <p class="card-label">Total clients</p>
+          <p class="card-value" id="prep-total-clients">0</p>
+          <p class="card-subtext">Active ASTA profiles.</p>
+        </div>
+        <div class="dashboard-card metric-card">
+          <p class="card-label">Total intakes</p>
+          <p class="card-value" id="prep-total-intakes">0</p>
+          <p class="card-subtext">Secure intake submissions.</p>
+        </div>
+        <div class="dashboard-card metric-card">
+          <p class="card-label">Awaiting documents</p>
+          <p class="card-value" id="prep-awaiting-docs">0</p>
+          <p class="card-subtext">Follow-up required.</p>
+        </div>
+        <div class="dashboard-card metric-card">
+          <p class="card-label">Awaiting 8879</p>
+          <p class="card-value" id="prep-awaiting-8879">0</p>
+          <p class="card-subtext">Authorization missing.</p>
+        </div>
+        <div class="dashboard-card metric-card">
+          <p class="card-label">Ready to file</p>
+          <p class="card-value" id="prep-ready-file">0</p>
+          <p class="card-subtext">Queued for e-file.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="preparer-section" id="preparer-queue" data-preparer-section hidden>
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Intake review queue</p>
+          <h2>Update status and move filings forward</h2>
+        </div>
+        <div class="prep-filters">
+          <label class="prep-filter">
+            <span>Search clients</span>
+            <input type="search" id="prep-intake-filter" placeholder="Name, email, username" />
+          </label>
+          <p class="prep-sync" id="prep-sync">Last sync: --</p>
+        </div>
+      </div>
+      <div class="portal-message info" id="preparer-message">Loading latest intakes...</div>
+      <div class="preparer-queue" id="preparer-queue-list" aria-live="polite"></div>
+    </section>
+
+    <section class="preparer-section" id="preparer-clients" data-preparer-section hidden>
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Client registry</p>
+          <h2>Manage contact records and upload volume</h2>
+        </div>
+      </div>
+      <div class="preparer-client-grid" id="preparer-client-grid"></div>
+    </section>
+
+    <section class="preparer-section" id="preparer-system" data-preparer-section hidden>
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">System status</p>
+          <h2>Storage and activity telemetry</h2>
+        </div>
+      </div>
+      <div class="dashboard-card">
+        <p class="card-label">Upload telemetry</p>
+        <p class="card-value" id="prep-storage-status">Not connected</p>
+        <p class="card-subtext" id="prep-storage-note">Connect the Supabase service role key to see upload counts by client.</p>
+        <button class="ghost" id="prep-telemetry-button" type="button">Load upload telemetry</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="ASTA logo" />
+        </div>
+        <div>
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Preparer command center</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="trust-center.html">Trust center</a>
+      </div>
+      <p class="footer-note">ASTA secure filing operations.</p>
+    </div>
+    <p class="footer-disclaimer">Confidential preparer view. Authorized staff only.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script type="module" src="preparer.js"></script>
+</body>
+</html>

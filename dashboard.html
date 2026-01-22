@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Secure Tax Agency | Client Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav dashboard-top">
+      <a class="brand brand-link" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+        </div>
+        <div class="brand-text">
+          <p class="brand-name">Atlas Secure Tax Agency</p>
+          <p class="brand-subtitle">Client dashboard</p>
+        </div>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle" aria-hidden="true" />
+      <label class="nav-toggle" for="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </label>
+      <div class="dashboard-links" id="nav-menu">
+        <a class="nav-home" href="index.html">Home</a>
+        <a href="index.html#estimate">Estimate refund</a>
+        <a href="index.html#intake">Complete secure intake</a>
+        <div class="nav-user">
+          <button class="user-chip" id="user-chip" type="button" aria-expanded="false">
+            <span class="user-initials" id="user-initials">?</span>
+            <span class="user-name" id="user-name"></span>
+          </button>
+          <button class="ghost signout-button" id="signout-button" type="button" aria-label="Sign out">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16 17l5-5-5-5M21 12H9M12 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar" id="dashboard-sidebar">
+        <button class="dashboard-toggle" id="dashboard-toggle" type="button" aria-expanded="true" aria-controls="dashboard-sidebar">
+          <span class="toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="toggle-label">Menu</span>
+        </button>
+
+        <div class="dashboard-profile">
+          <div class="profile-avatar">AT</div>
+          <div class="profile-info">
+            <p class="profile-name">Client workspace</p>
+            <p class="profile-status">Secure filing in progress</p>
+          </div>
+        </div>
+
+        <nav class="dashboard-nav">
+          <a class="dashboard-item is-active" href="#dashboard-overview">
+            <span class="dashboard-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="dashboard-label">Overview</span>
+          </a>
+          <a class="dashboard-item" href="#dashboard-authorization">
+            <span class="dashboard-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 4h8l4 4v12H6zM8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="dashboard-label">E-file authorization</span>
+          </a>
+          <a class="dashboard-item" href="#dashboard-uploads">
+            <span class="dashboard-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v12M7 8l5-5 5 5M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="dashboard-label">Document uploads</span>
+          </a>
+          <a class="dashboard-item" href="#dashboard-activity">
+            <span class="dashboard-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 18l6-6 4 4 6-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="dashboard-label">Activity</span>
+          </a>
+          <a class="dashboard-item" href="#dashboard-support">
+            <span class="dashboard-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="dashboard-label">Support</span>
+          </a>
+        </nav>
+
+        <div class="dashboard-meta">
+          <p class="meta-label">Filing year</p>
+          <p class="meta-value">2025 (current)</p>
+        </div>
+      </aside>
+
+      <div class="dashboard-main">
+        <section id="dashboard-overview" class="dashboard-section" data-reveal style="--delay:0.05s">
+          <div class="dashboard-header">
+            <div>
+              <p class="eyebrow">Client dashboard</p>
+              <h1>Maintain a single, secure record for documents and authorizations.</h1>
+              <p class="hero-copy">Upload IRS forms, track approvals, and keep your preparer informed in real time.</p>
+            </div>
+            <div class="dashboard-header-actions">
+              <span class="status-badge required" id="auth-header-badge">Form 8879 required</span>
+            </div>
+          </div>
+          <div class="dashboard-card refund-card" id="refund-card">
+            <p class="card-label">Estimated refund</p>
+            <p class="refund-value" id="refund-value">Estimate pending</p>
+            <p class="refund-note" id="refund-note">Based on your most recent secure intake.</p>
+          </div>
+          <div class="dashboard-metrics">
+            <div class="dashboard-card metric-card" id="metric-filing-year-card">
+              <p class="card-label">Filing year</p>
+              <p class="card-value skeleton-text" id="metric-filing-year">2025</p>
+              <p class="card-subtext skeleton-text" id="metric-filing-year-note">Current tax year selection.</p>
+            </div>
+            <div class="dashboard-card metric-card" id="metric-last-upload-card">
+              <p class="card-label">Last upload</p>
+              <p class="card-value skeleton-text" id="metric-last-upload">No uploads yet</p>
+              <p class="card-subtext skeleton-text" id="metric-last-upload-note">Updated after each secure upload.</p>
+            </div>
+            <div class="dashboard-card metric-card" id="metric-vault-status-card">
+              <p class="card-label">Vault status</p>
+              <p class="card-value skeleton-text" id="metric-vault-status">Active</p>
+              <p class="card-subtext skeleton-text" id="metric-vault-status-note">Encryption and access controls enabled.</p>
+            </div>
+          </div>
+          <div class="dashboard-card checklist-card" id="checklist-card">
+            <div class="checklist-header">
+              <div>
+                <p class="eyebrow">Client checklist</p>
+                <h3>Complete these items to move your filing forward</h3>
+              </div>
+              <span class="status-badge pending" id="checklist-badge">In progress</span>
+            </div>
+            <div class="checklist-items" role="list">
+              <div class="checklist-item" id="checklist-profile" role="listitem">
+                <span class="check-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 13l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="checklist-title">Profile verified</p>
+                  <p class="checklist-note">Username and contact details confirmed.</p>
+                </div>
+              </div>
+              <div class="checklist-item" id="checklist-intake" role="listitem">
+                <span class="check-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 13l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="checklist-title">Secure intake submitted</p>
+                  <p class="checklist-note">Tax data captured and ready for review.</p>
+                </div>
+              </div>
+              <div class="checklist-item" id="checklist-uploads" role="listitem">
+                <span class="check-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 13l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="checklist-title">Documents uploaded</p>
+                  <p class="checklist-note">W-2s, 1099s, and supporting records provided.</p>
+                </div>
+              </div>
+              <div class="checklist-item" id="checklist-authorization" role="listitem">
+                <span class="check-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 13l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <p class="checklist-title">Form 8879 authorization</p>
+                  <p class="checklist-note">Required to transmit your return.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card review-card" id="review-card">
+            <div class="review-header">
+              <div>
+                <p class="eyebrow">Preparer review workflow</p>
+                <h2>Intake review status</h2>
+              </div>
+              <span class="status-badge required" id="review-status-badge">Pending</span>
+            </div>
+            <p class="review-detail" id="review-status-detail">Awaiting your most recent secure intake submission.</p>
+            <div class="review-timeline" id="review-timeline">
+              <div class="timeline-step" data-status="received">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Intake received</p>
+                  <p class="timeline-note">Submission logged in the secure vault.</p>
+                </div>
+              </div>
+              <div class="timeline-step" data-status="in_review">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Preparer review</p>
+                  <p class="timeline-note">Assigned preparer validates documents.</p>
+                </div>
+              </div>
+              <div class="timeline-step" data-status="awaiting_documents">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Awaiting documents</p>
+                  <p class="timeline-note">Additional uploads requested.</p>
+                </div>
+              </div>
+              <div class="timeline-step" data-status="awaiting_authorization">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Awaiting Form 8879</p>
+                  <p class="timeline-note">Authorization required before filing.</p>
+                </div>
+              </div>
+              <div class="timeline-step" data-status="ready_to_file">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Ready to file</p>
+                  <p class="timeline-note">Packet complete and queued for e-file.</p>
+                </div>
+              </div>
+              <div class="timeline-step" data-status="filed">
+                <span class="timeline-node"></span>
+                <div>
+                  <p class="timeline-title">Filed</p>
+                  <p class="timeline-note">Return transmitted to the IRS.</p>
+                </div>
+              </div>
+            </div>
+            <p class="review-updated" id="review-updated"></p>
+            <p class="review-note" id="review-note"></p>
+          </div>
+          <div class="dashboard-cards">
+            <div class="dashboard-card">
+              <p class="card-label">Intake status</p>
+              <p class="card-value" id="intake-status-value">Pending</p>
+              <p class="card-subtext" id="intake-status-note">Complete secure intake to begin preparation.</p>
+            </div>
+            <div class="dashboard-card">
+              <p class="card-label">E-file authorization</p>
+              <p class="card-value" id="auth-overview-value">Form 8879 required</p>
+              <p class="card-subtext" id="auth-overview-note">Upload once signed to authorize e-file.</p>
+            </div>
+            <div class="dashboard-card">
+              <p class="card-label">Document vault</p>
+              <p class="card-value">Encrypted and private</p>
+              <p class="card-subtext">Access is limited to your assigned preparer.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="dashboard-authorization" class="dashboard-section" data-reveal style="--delay:0.18s">
+          <div>
+            <h2>E-file authorization</h2>
+            <p>Form 8879 is required before your preparer can transmit your return to the IRS.</p>
+          </div>
+          <div class="portal-card auth-card">
+            <div class="auth-header">
+              <div>
+                <h3>IRS Form 8879</h3>
+                <p>Upload the signed IRS Form 8879 to authorize electronic filing.</p>
+              </div>
+              <span class="status-badge required" id="auth-status">Required</span>
+            </div>
+            <a href="https://www.irs.gov/pub/irs-pdf/f8879.pdf" target="_blank" rel="noreferrer">Download Form 8879</a>
+            <p class="upload-hint">File name must include 8879 (example: Form_8879.pdf).</p>
+            <p class="upload-hint">Max 10 MB • PDF, JPG, PNG</p>
+            <input type="file" id="auth-upload-input" accept=".pdf,.jpg,.png" />
+            <button class="primary" id="auth-upload-button">Upload authorization form</button>
+            <p class="upload-progress" id="auth-upload-progress" role="status" aria-live="polite"></p>
+            <p class="portal-message" id="auth-upload-message"></p>
+            <div class="upload-receipt" id="auth-upload-receipt"></div>
+          </div>
+        </section>
+
+        <section id="dashboard-uploads" class="dashboard-section" data-reveal style="--delay:0.12s">
+          <div>
+            <h2>Document uploads</h2>
+            <p>Send W-2s, 1099s, and supporting records directly to your preparer.</p>
+          </div>
+          <div class="portal-card upload-card">
+            <h3>Upload documents</h3>
+            <p>Drag-and-drop or browse to upload IRS forms and supporting documents.</p>
+            <ul class="upload-rules">
+              <li>Accepted: PDF, JPG, PNG</li>
+              <li>Max size: 10 MB per file</li>
+              <li>Retention: 7 years or per firm policy</li>
+              <li>Security screening: file signature + sensitive data checks</li>
+              <li>File name must include document type (e.g., W-2_2025.pdf)</li>
+            </ul>
+            <div class="upload-drop" id="upload-drop" role="button" tabindex="0" aria-label="Upload documents">
+              <p>Drop files here or click to browse</p>
+              <input type="file" id="upload-input" multiple accept=".pdf,.jpg,.png" />
+            </div>
+            <p class="upload-hint">Max 10 MB per file • PDF, JPG, PNG</p>
+            <button class="primary" id="upload-button">Upload selected files</button>
+            <p class="upload-progress" id="upload-progress" role="status" aria-live="polite"></p>
+            <p class="portal-message" id="upload-message"></p>
+            <div class="upload-receipt" id="upload-receipt"></div>
+          </div>
+        </section>
+
+        <section id="dashboard-activity" class="dashboard-section" data-reveal style="--delay:0.24s">
+          <div>
+            <h2>Recent activity</h2>
+            <p>Track uploads and authorization updates as they occur.</p>
+          </div>
+          <div class="portal-card activity-card">
+            <div class="activity-list" id="activity-list"></div>
+          </div>
+        </section>
+
+        <section id="dashboard-support" class="dashboard-section" data-reveal style="--delay:0.3s">
+          <div>
+            <h2>Support center</h2>
+            <p>Contact your preparer for questions, corrections, or filing updates.</p>
+          </div>
+          <div class="portal-card">
+            <div class="support-grid">
+              <div>
+                <p class="card-label">Assigned preparer</p>
+                <p class="card-value">ASTA Filing Team</p>
+                <p class="card-subtext">Typical response within 1 business day.</p>
+              </div>
+              <div>
+                <p class="card-label">Secure contact</p>
+                <p class="card-value">support@atlassecuretax.com</p>
+                <p class="card-subtext">Include your username for faster help.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="viewer-overlay" id="viewer-overlay" aria-hidden="true">
+    <div class="viewer-panel" role="dialog" aria-modal="true" aria-labelledby="viewer-title" aria-describedby="viewer-meta" tabindex="-1">
+      <div class="viewer-header">
+        <div>
+          <p class="eyebrow">Document preview</p>
+          <h3 id="viewer-title">Preview</h3>
+          <p class="viewer-meta" id="viewer-meta"></p>
+        </div>
+        <button class="ghost viewer-close" id="viewer-close" type="button" aria-label="Close preview">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6l-12 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="viewer-body" id="viewer-body"></div>
+      <div class="viewer-actions">
+        <a class="ghost" id="viewer-open" href="#" target="_blank" rel="noreferrer">Open in new tab</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/asta-logo.jpg" alt="Atlas Secure Tax Agency logo" />
+      <div>
+        <p class="brand-name">Atlas Secure Tax Agency</p>
+        <p class="brand-subtitle">Client dashboard support • support@atlassecuretax.com</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclosures.html">Disclosures</a>
+    </div>
+    <p class="footer-note">Copyright <span id="year"></span> Atlas Secure Tax Agency. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script type="module" src="home.js"></script>
+  <script type="module" src="dashboard.js"></script>
+  <script type="module" src="vault.js"></script>
+</body>
+</html>

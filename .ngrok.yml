@@ -1,0 +1,6 @@
+version: "2"
+authtoken: 38TILh6nlZdMKpXBE27dg4pdw4d_BkG2qwnRWNUbmuFqTmeE
+tunnels:
+  taxagent:
+    addr: 5173
+    proto: http
