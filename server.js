@@ -2,8 +2,6 @@ import express from "express";
 import { Pool } from "pg";
 import dotenv from "dotenv";
 import crypto from "crypto";
-import path from "path";
-import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -12,7 +10,7 @@ const port = process.env.PORT || 5173;
 const hostArgIndex = process.argv.indexOf("--host");
 const host = (hostArgIndex !== -1 && process.argv[hostArgIndex + 1]) || process.env.HOST || "127.0.0.1";
 
-const baseDir = path.dirname(fileURLToPath(import.meta.url));
+const baseDir = process.cwd();
 
 const dbUrl = process.env.DATABASE_URL;
 if (!dbUrl) {
